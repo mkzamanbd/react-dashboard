@@ -1,27 +1,42 @@
-import SideBarMenu from 'components/SideBarMenu';
-import TopHeader from 'components/TopHeader';
-import { useState } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+
+import Dashboard from 'pages/Dashboard';
+import Login from 'pages/Login';
+import PageNotFound from 'pages/PageNotFound';
+import AuthRoute from 'utils/AuthRoute';
+import GuestRoute from 'utils/GuestRoute';
 
 export default function App() {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleSidebar = (value) => {
-        setIsOpen(value);
-    };
-
     return (
-        <div className="flex h-screen bg-gray-200 font-roboto">
-            <SideBarMenu isOpen={isOpen} toggleSidebar={toggleSidebar} />
-
-            <div className="flex-1 flex flex-col overflow-hidden">
-                <TopHeader toggleSidebar={toggleSidebar} />
-
-                <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
-                    <div className="container mx-auto px-6 py-8">
-                        <slot />
-                    </div>
-                </main>
-            </div>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Navigate to="/dashboard" />} />
+                <Route
+                    path="/login"
+                    element={
+                        <GuestRoute>
+                            <Login />
+                        </GuestRoute>
+                    }
+                />
+                <Route
+                    path="/dashboard"
+                    element={
+                        <AuthRoute>
+                            <Dashboard />
+                        </AuthRoute>
+                    }
+                />
+                {/* page not found */}
+                <Route
+                    path="*"
+                    element={
+                        <AuthRoute>
+                            <PageNotFound />
+                        </AuthRoute>
+                    }
+                />
+            </Routes>
+        </BrowserRouter>
     );
 }
