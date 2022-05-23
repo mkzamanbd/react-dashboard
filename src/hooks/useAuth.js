@@ -1,7 +1,7 @@
 // check auth
 export default function isAuth() {
     // get token from localStorage
-    const token = '5989323042';
+    const token = localStorage.getItem('r_token');
     if (token !== undefined && token != null) {
         return true;
     }
