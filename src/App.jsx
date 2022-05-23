@@ -1,10 +1,13 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-import Dashboard from 'pages/Dashboard';
-import Login from 'pages/Login';
-import PageNotFound from 'pages/PageNotFound';
-import AuthRoute from 'utils/AuthRoute';
 import GuestRoute from 'utils/GuestRoute';
+import AuthRoute from 'utils/AuthRoute';
+import Login from 'pages/Auth/Login';
+import PageNotFound from 'pages/PageNotFound';
+import Dashboard from 'pages/Dashboard';
+import UIElements from 'pages/UIElements';
+import Tables from 'pages/Tables';
+import Cards from 'pages/Cards';
 
 export default function App() {
     return (
@@ -24,6 +27,30 @@ export default function App() {
                     element={
                         <AuthRoute>
                             <Dashboard />
+                        </AuthRoute>
+                    }
+                />
+                <Route
+                    path="/ui-elements"
+                    element={
+                        <AuthRoute>
+                            <UIElements />
+                        </AuthRoute>
+                    }
+                />
+                <Route
+                    path="/tables"
+                    element={
+                        <AuthRoute>
+                            <Tables />
+                        </AuthRoute>
+                    }
+                />
+                <Route
+                    path="/cards"
+                    element={
+                        <AuthRoute>
+                            <Cards />
                         </AuthRoute>
                     }
                 />

@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 function SideBarMenu({ isOpen, toggleSidebar }) {
+    const location = useLocation();
+    const isActive = (path) => location.pathname === path;
+
     return (
         <div className="flex">
             <div
@@ -42,7 +46,9 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
                 </div>
 
                 <nav className="mt-10">
-                    <a className="nav-link-active" href="/dashboard">
+                    <Link
+                        to="/dashboard"
+                        className={isActive('/dashboard') ? 'nav-link-active' : 'nav-link'}>
                         <svg
                             className="w-5 h-5"
                             viewBox="0 0 20 20"
@@ -59,9 +65,11 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
                         </svg>
 
                         <span className="mx-4">Dashboard</span>
-                    </a>
+                    </Link>
 
-                    <a className="nav-link" href="/ui-elements">
+                    <Link
+                        to="/ui-elements"
+                        className={isActive('/ui-elements') ? 'nav-link-active' : 'nav-link'}>
                         <svg
                             className="w-5 h-5"
                             viewBox="0 0 20 20"
@@ -86,9 +94,11 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
                         </svg>
 
                         <span className="mx-4">UI Elements</span>
-                    </a>
+                    </Link>
 
-                    <a className="nav-link" href="/tables">
+                    <Link
+                        to="/tables"
+                        className={isActive('/tables') ? 'nav-link-active' : 'nav-link'}>
                         <svg
                             className="w-5 h-5"
                             viewBox="0 0 20 20"
@@ -109,9 +119,11 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
                         </svg>
 
                         <span className="mx-4">Tables</span>
-                    </a>
+                    </Link>
 
-                    <a className="nav-link" href="/forms">
+                    <Link
+                        to="/forms"
+                        className={isActive('/forms') ? 'nav-link-active' : 'nav-link'}>
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
                             <path
@@ -122,9 +134,11 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
                         </svg>
 
                         <span className="mx-4">Forms</span>
-                    </a>
+                    </Link>
 
-                    <a className="nav-link" href="/cards">
+                    <Link
+                        to="/cards"
+                        className={isActive('/cards') ? 'nav-link-active' : 'nav-link'}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="w-5 h-5"
@@ -139,9 +153,11 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
                         </svg>
 
                         <span className="mx-4">Cards</span>
-                    </a>
+                    </Link>
 
-                    <a className="nav-link" href="/modal">
+                    <Link
+                        to="/modal"
+                        className={isActive('/modal') ? 'nav-link-active' : 'nav-link'}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="w-5 h-5"
@@ -153,15 +169,17 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
                         </svg>
 
                         <span className="mx-4">Modal</span>
-                    </a>
+                    </Link>
 
-                    <a className="nav-link" href="/blank">
+                    <Link
+                        to="/blank"
+                        className={isActive('/blank') ? 'nav-link-active' : 'nav-link'}>
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                         </svg>
 
                         <span className="mx-4">Blank</span>
-                    </a>
+                    </Link>
                 </nav>
             </div>
         </div>
