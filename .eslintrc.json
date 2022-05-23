@@ -18,6 +18,7 @@
         "jest": true
     },
     "rules": {
+        "global-require": 0,
         "react/react-in-jsx-scope": "off",
         "react-hooks/rules-of-hooks": "error",
         "no-console": "off",
