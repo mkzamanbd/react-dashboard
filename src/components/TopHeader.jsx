@@ -1,20 +1,14 @@
 import React, { useState } from 'react';
-import { useSidebar } from 'hooks/useSidebar';
 
-function TopHeader() {
+function TopHeader({ toggleSidebar }) {
     const [dropdownOpen, setDropdownOpen] = useState(false);
-    let { isOpen } = useSidebar();
-
-    const toggleSidebar = () => {
-        isOpen = !isOpen;
-    };
 
     return (
         <header className="flex items-center justify-between px-6 py-4 bg-white border-b-4 border-indigo-600">
             <div className="flex items-center">
                 <button
                     type="button"
-                    onClick={toggleSidebar}
+                    onClick={() => toggleSidebar(true)}
                     className="text-gray-500 focus:outline-none lg:hidden">
                     <svg
                         className="w-6 h-6"

@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function SideBarMenu() {
-    const [isOpen, setIsOpen] = useState(false);
-
+function SideBarMenu({ isOpen, toggleSidebar }) {
     return (
         <div className="flex">
             <div
-                onClick={() => setIsOpen(false)}
+                onClick={() => toggleSidebar(false)}
                 role="button"
                 tabIndex="0"
                 className={`${
