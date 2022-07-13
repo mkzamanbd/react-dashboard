@@ -9,6 +9,7 @@ import Dashboard from 'pages/Dashboard';
 import UIElements from 'pages/UIElements';
 import Tables from 'pages/Tables';
 import Cards from 'pages/Cards';
+import EmptyLayout from 'components/EmptyLayout';
 
 export default function App() {
     return (
@@ -60,9 +61,9 @@ export default function App() {
                     <Route
                         path="*"
                         element={
-                            <AuthRoute>
+                            <EmptyLayout>
                                 <PageNotFound />
-                            </AuthRoute>
+                            </EmptyLayout>
                         }
                     />
                 </Routes>
