@@ -1,8 +1,7 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect, useMemo } from 'react';
 import {
     signOut,
     updateEmail,
-    updatePassword,
     onAuthStateChanged,
     sendPasswordResetEmail,
     signInWithEmailAndPassword,
@@ -41,10 +40,6 @@ export function AuthProvider({ children }) {
         return updateEmail(auth, email);
     }
 
-    function updateUserPassword(password) {
-        return updatePassword(currentUser, password);
-    }
-
     useEffect(
         () =>
             onAuthStateChanged(auth, (user) => {
@@ -54,16 +49,17 @@ export function AuthProvider({ children }) {
         []
     );
 
-    // eslint-disable-next-line react/jsx-no-constructed-context-values
-    const value = {
-        login,
-        signup,
-        logout,
-        currentUser,
-        resetPassword,
-        updateUserEmail,
-        updateUserPassword,
-    };
+    const value = useMemo(
+        () => ({
+            login,
+            signup,
+            logout,
+            currentUser,
+            resetPassword,
+            updateUserEmail,
+        }),
+        [currentUser]
+    );
 
     return (
         <AuthContext.Provider value={value}>
