@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useAuth } from 'contexts/AuthContext';
 
 function TopHeader({ toggleSidebar }) {
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const { logout } = useAuth();
 
     return (
         <header className="flex items-center justify-between px-6 py-4 bg-white border-b-4 border-indigo-600">
@@ -96,7 +98,11 @@ function TopHeader({ toggleSidebar }) {
                                     Products
                                 </a>
                                 <a
-                                    href="/"
+                                    href="/login"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        logout();
+                                    }}
                                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white">
                                     Log out
                                 </a>

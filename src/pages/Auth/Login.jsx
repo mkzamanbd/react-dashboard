@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from 'contexts/AuthContext';
 
 function Login() {
-    const [email, setEmail] = useState('johndoe@mail.com');
-    const [password, setPassword] = useState('@#!@#asdf1231!_!@#');
+    const [email, setEmail] = useState('zaman@gmail.com');
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [password, setPassword] = useState('123456');
     const navigate = useNavigate();
+    const { login } = useAuth();
 
-    const loginHandler = (event) => {
+    const loginHandler = async (event) => {
         event.preventDefault();
 
-        localStorage.setItem('r_token', '12345');
-        navigate('/dashboard');
-        console.log('Login');
+        try {
+            setError('');
+            setLoading(true);
+            await login(email, password);
+            navigate('/dashboard');
+        } catch (err) {
+            setError('Invalid email or password');
+            setLoading(false);
+        }
     };
     return (
         <div className="flex items-center justify-center h-screen px-6 bg-gray-200">
@@ -35,10 +45,11 @@ function Login() {
                             fill="white"
                         />
                     </svg>
-                    <span className="text-2xl font-semibold text-gray-700">V-Dashboard</span>
+                    <span className="text-2xl font-semibold text-gray-700">Login</span>
                 </div>
 
                 <form className="mt-4" onSubmit={loginHandler}>
+                    {error && <div className="text-red-500 text-sm">{error}</div>}
                     <label className="block">
                         <span className="text-sm text-gray-700">Email</span>
                         <input
@@ -82,6 +93,7 @@ function Login() {
                     <div className="mt-6">
                         <button
                             type="submit"
+                            disabled={loading}
                             className="w-full px-4 py-2 text-sm text-center text-white bg-indigo-600 rounded-md focus:outline-none hover:bg-indigo-500">
                             Sign in
                         </button>

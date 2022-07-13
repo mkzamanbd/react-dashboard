@@ -20,7 +20,7 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
                 className={`${
                     isOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'
                 } fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto transition duration-300 transform bg-gray-900 lg:translate-x-0 lg:static lg:inset-0`}>
-                <div className="flex items-center justify-center mt-8">
+                <div className="flex items-center justify-center my-6">
                     <div className="flex items-center">
                         <svg
                             className="w-12 h-12"
@@ -41,11 +41,11 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
                             />
                         </svg>
 
-                        <span className="mx-2 text-2xl font-semibold text-white">R-Dashboard</span>
+                        <span className="mx-2 text-2xl font-semibold text-white">Dashboard</span>
                     </div>
                 </div>
 
-                <nav className="mt-10">
+                <nav>
                     <Link
                         to="/dashboard"
                         className={isActive('/dashboard') ? 'nav-link-active' : 'nav-link'}>
