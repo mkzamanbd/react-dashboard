@@ -19,7 +19,7 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
             <div
                 className={`${
                     isOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'
-                } fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto transition duration-300 transform bg-gray-900 lg:translate-x-0 lg:static lg:inset-0`}>
+                } fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto transition duration-300 transform bg-gray-800 dark:bg-gray-800 lg:translate-x-0 lg:static lg:inset-0`}>
                 <div className="flex items-center justify-center my-6">
                     <Link to="/dashboard" className="flex items-center">
                         <svg

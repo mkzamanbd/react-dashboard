@@ -6,7 +6,7 @@ function Tables() {
 
     return (
         <div>
-            <h3 className="text-3xl font-medium text-gray-700">Tables</h3>
+            <h3 className="text-3xl font-medium text-gray-700 dark:text-gray-300">Tables</h3>
 
             <div className="mt-4">
                 <h4 className="text-gray-600">Simple Table</h4>

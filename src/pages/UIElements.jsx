@@ -3,7 +3,7 @@ import React from 'react';
 function UIElements() {
     return (
         <div>
-            <h3 className="text-3xl font-medium text-gray-700">UI Elements</h3>
+            <h3 className="text-3xl font-medium text-gray-700 dark:text-gray-300">UI Elements</h3>
 
             <div className="mt-4">
                 <h4 className="text-gray-600">Alerts</h4>

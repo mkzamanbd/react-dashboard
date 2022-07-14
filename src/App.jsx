@@ -10,6 +10,7 @@ import UIElements from 'pages/UIElements';
 import Tables from 'pages/Tables';
 import Cards from 'pages/Cards';
 import EmptyLayout from 'components/EmptyLayout';
+import Forms from 'pages/Forms';
 
 export default function App() {
     return (
@@ -46,6 +47,14 @@ export default function App() {
                         element={
                             <AuthRoute>
                                 <Tables />
+                            </AuthRoute>
+                        }
+                    />
+                    <Route
+                        path="/forms"
+                        element={
+                            <AuthRoute>
+                                <Forms />
                             </AuthRoute>
                         }
                     />
