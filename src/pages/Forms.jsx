@@ -6,7 +6,7 @@ function Forms() {
             <h3 className="text-3xl font-medium text-gray-700">Forms</h3>
 
             <div className="mt-4">
-                <div className="container mx-auto grid">
+                <div className="mx-auto grid">
                     <h4 className="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
                         Elements
                     </h4>
