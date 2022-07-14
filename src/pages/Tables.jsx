@@ -9,7 +9,7 @@ function Tables() {
             <h3 className="text-3xl font-medium text-gray-700 dark:text-gray-300">Tables</h3>
 
             <div className="mt-4">
-                <h4 className="text-gray-600">Simple Table</h4>
+                <h4 className="text-gray-600 dark:text-gray-300">Simple Table</h4>
 
                 <div className="mt-6">
                     <div className="my-6 overflow-hidden bg-white rounded-md shadow">
@@ -42,7 +42,7 @@ function Tables() {
             </div>
 
             <div className="mt-8">
-                <h4 className="text-gray-600">Table with pagination</h4>
+                <h4 className="text-gray-600 dark:text-gray-300">Table with pagination</h4>
 
                 <div className="mt-6">
                     <h2 className="text-xl font-semibold leading-tight text-gray-700">Users</h2>
@@ -169,34 +169,36 @@ function Tables() {
             </div>
 
             <div className="mt-8">
-                <h4 className="text-gray-600">Wide Table</h4>
+                <h4 className="text-gray-600 dark:text-gray-300">Wide Table</h4>
 
                 <div className="flex flex-col mt-6">
                     <div className="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-                        <div className="inline-block min-w-full overflow-hidden align-middle border-b border-gray-200 shadow sm:rounded-lg">
+                        <div className="inline-block min-w-full overflow-hidden align-middle border-b border-gray-200 dark:border-gray-700 shadow sm:rounded-lg">
                             <table className="min-w-full">
-                                <thead>
+                                <thead className="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
                                     <tr>
-                                        <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase bg-gray-100 border-b border-gray-200">
+                                        <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left uppercase">
                                             Name
                                         </th>
-                                        <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase bg-gray-100 border-b border-gray-200">
+                                        <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left uppercase">
                                             Title
                                         </th>
-                                        <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase bg-gray-100 border-b border-gray-200">
+                                        <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left uppercase">
                                             Status
                                         </th>
-                                        <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase bg-gray-100 border-b border-gray-200">
+                                        <th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left uppercase">
                                             Role
                                         </th>
-                                        <th className="px-6 py-3 bg-gray-100 border-b border-gray-200" />
+                                        <th className="px-6 py-3" />
                                     </tr>
                                 </thead>
 
-                                <tbody className="bg-white">
+                                <tbody className="bg-white dark:bg-gray-800">
                                     {wideTableData.map((u) => (
-                                        <tr key={Math.random()}>
-                                            <td className="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
+                                        <tr
+                                            key={Math.random()}
+                                            className="border-b border-gray-200 dark:border-gray-700">
+                                            <td className="px-6 py-4 whitespace-nowrap">
                                                 <div className="flex items-center">
                                                     <div className="flex-shrink-0 w-10 h-10">
                                                         <img
@@ -207,7 +209,7 @@ function Tables() {
                                                     </div>
 
                                                     <div className="ml-4">
-                                                        <div className="text-sm font-medium leading-5 text-gray-900">
+                                                        <div className="text-sm font-medium leading-5 text-gray-700 dark:text-gray-300">
                                                             {u.name}
                                                         </div>
                                                         <div className="text-sm leading-5 text-gray-500">
@@ -217,8 +219,8 @@ function Tables() {
                                                 </div>
                                             </td>
 
-                                            <td className="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
-                                                <div className="text-sm leading-5 text-gray-900">
+                                            <td className="px-6 py-4 whitespace-nowrap">
+                                                <div className="text-sm leading-5 text-gray-700 dark:text-gray-300">
                                                     {u.title}
                                                 </div>
                                                 <div className="text-sm leading-5 text-gray-500">
@@ -226,17 +228,17 @@ function Tables() {
                                                 </div>
                                             </td>
 
-                                            <td className="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
+                                            <td className="px-6 py-4 whitespace-nowrap">
                                                 <span className="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
                                                     {u.status}
                                                 </span>
                                             </td>
 
-                                            <td className="px-6 py-4 text-sm leading-5 text-gray-500 border-b border-gray-200 whitespace-nowrap">
+                                            <td className="px-6 py-4 text-sm leading-5 text-gray-500 dark:text-gray-300 whitespace-nowrap">
                                                 {u.role}
                                             </td>
 
-                                            <td className="px-6 py-4 text-sm font-medium leading-5 text-right border-b border-gray-200 whitespace-nowrap">
+                                            <td className="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-nowrap">
                                                 <a
                                                     href="/edit"
                                                     className="text-indigo-600 hover:text-indigo-900">

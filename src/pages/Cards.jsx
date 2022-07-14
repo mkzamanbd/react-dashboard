@@ -107,19 +107,19 @@ function Cards() {
                 </div>
             </div>
             <div className="mt-4 mb-3">
-                <h4 className="text-gray-700">Stacked</h4>
+                <h4 className="text-gray-700 dark:text-gray-300">Stacked</h4>
 
-                <div className="max-w-sm mt-6 overflow-hidden bg-white rounded shadow-lg">
+                <div className="max-w-sm mt-6 overflow-hidden bg-white dark:bg-gray-800 rounded shadow-lg">
                     <img
                         className="w-full"
                         src="https://picsum.photos/id/1016/384/234"
                         alt="Sunset in the mountains"
                     />
                     <div className="px-6 py-4">
-                        <div className="mb-2 text-xl font-bold text-gray-900">
+                        <div className="mb-2 text-xl font-bold text-gray-600 dark:text-gray-300">
                             The Coldest Sunset
                         </div>
-                        <p className="text-base text-gray-700">
+                        <p className="text-base text-gray-600 dark:text-gray-300">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
                             quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
                             nihil.
@@ -138,9 +138,9 @@ function Cards() {
                     </div>
                 </div>
             </div>
-            <hr />
+
             <div className="mt-5">
-                <h4 className="text-gray-700">Horizontal</h4>
+                <h4 className="text-gray-700 dark:text-gray-300">Horizontal</h4>
                 <div className="w-full max-w-sm mt-6 lg:max-w-full lg:flex">
                     <div
                         className="flex-none h-48 overflow-hidden text-center bg-cover rounded-t lg:h-auto lg:w-48 lg:rounded-t-none lg:rounded-l"
@@ -149,9 +149,9 @@ function Cards() {
                         }}
                         title="Woman holding a mug"
                     />
-                    <div className="flex flex-col justify-between p-4 leading-normal bg-white border-b border-l border-r border-gray-200 rounded-b lg:border-l-0 lg:border-t lg:border-gray-200 lg:rounded-b-none lg:rounded-r">
+                    <div className="flex flex-col justify-between p-4 leading-normal bg-white dark:bg-gray-800 border-b border-l border-r border-gray-200 dark:border-gray-700 rounded-b lg:border-l-0 lg:border-t lg:border-gray-200 lg:rounded-b-none lg:rounded-r">
                         <div className="mb-8">
-                            <p className="flex items-center text-sm text-gray-600">
+                            <p className="flex items-center text-sm text-gray-600 dark:text-gray-300">
                                 <svg
                                     className="w-3 h-3 mr-2 text-gray-500 fill-current"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -160,10 +160,10 @@ function Cards() {
                                 </svg>
                                 Members only
                             </p>
-                            <div className="mb-2 text-xl font-bold text-gray-900">
+                            <div className="mb-2 text-xl font-bold text-gray-600 dark:text-gray-300">
                                 Can coffee make you a better developer?
                             </div>
-                            <p className="text-base text-gray-700">
+                            <p className="text-base text-gray-600 dark:text-gray-300">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Voluptatibus quia, nulla! Maiores et perferendis eaque,
                                 exercitationem praesentium nihil.
@@ -176,8 +176,10 @@ function Cards() {
                                 alt="Avatar of Jonathan Reinink"
                             />
                             <div className="text-sm">
-                                <p className="leading-none text-gray-900">Jonathan Reinink</p>
-                                <p className="text-gray-600">Aug 18</p>
+                                <p className="leading-none text-gray-700 dark:text-gray-300">
+                                    Jonathan Reinink
+                                </p>
+                                <p className="text-gray-600 dark:text-gray-500">Aug 18</p>
                             </div>
                         </div>
                     </div>
