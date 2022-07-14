@@ -48,7 +48,7 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
                 <nav>
                     <Link
                         to="/dashboard"
-                        className={isActive('/dashboard') ? 'nav-link-active' : 'nav-link'}>
+                        className={`${isActive('/dashboard') && 'nav-link-active'} nav-link`}>
                         <svg
                             className="w-5 h-5"
                             viewBox="0 0 20 20"
@@ -69,7 +69,7 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
 
                     <Link
                         to="/ui-elements"
-                        className={isActive('/ui-elements') ? 'nav-link-active' : 'nav-link'}>
+                        className={`${isActive('/ui-elements') && 'nav-link-active'} nav-link`}>
                         <svg
                             className="w-5 h-5"
                             viewBox="0 0 20 20"
@@ -98,7 +98,7 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
 
                     <Link
                         to="/tables"
-                        className={isActive('/tables') ? 'nav-link-active' : 'nav-link'}>
+                        className={`${isActive('/tables') && 'nav-link-active'} nav-link`}>
                         <svg
                             className="w-5 h-5"
                             viewBox="0 0 20 20"
@@ -123,7 +123,7 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
 
                     <Link
                         to="/forms"
-                        className={isActive('/forms') ? 'nav-link-active' : 'nav-link'}>
+                        className={`${isActive('/forms') && 'nav-link-active'} nav-link`}>
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
                             <path
@@ -138,7 +138,7 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
 
                     <Link
                         to="/cards"
-                        className={isActive('/cards') ? 'nav-link-active' : 'nav-link'}>
+                        className={`${isActive('/cards') && 'nav-link-active'} nav-link`}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="w-5 h-5"
@@ -157,7 +157,7 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
 
                     <Link
                         to="/modal"
-                        className={isActive('/modal') ? 'nav-link-active' : 'nav-link'}>
+                        className={`${isActive('/model') && 'nav-link-active'} nav-link`}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="w-5 h-5"
@@ -173,7 +173,7 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
 
                     <Link
                         to="/blank"
-                        className={isActive('/blank') ? 'nav-link-active' : 'nav-link'}>
+                        className={`${isActive('/blank') && 'nav-link-active'} nav-link`}>
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                         </svg>
