@@ -13,7 +13,25 @@ function TopHeader({ toggleSidebar }) {
                 <button
                     type="button"
                     onClick={() => toggleSidebar(true)}
-                    className="text-gray-500 focus:outline-none">
+                    className="text-gray-500 focus:outline-none lg:hidden">
+                    <svg
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4 6H20M4 12H20M4 18H11"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+                </button>
+                <button
+                    type="button"
+                    onClick={() => document.body.classList.toggle('mini-sidebar')}
+                    className="text-gray-500 focus:outline-none hidden lg:block">
                     <svg
                         className="w-6 h-6"
                         viewBox="0 0 24 24"

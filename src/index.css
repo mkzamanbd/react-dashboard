@@ -44,3 +44,39 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #718096;
 }
+.mini-sidebar .nav-menu .link-label {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+}
+.mini-sidebar .app-name {
+    display: none;
+}
+.mini-sidebar .nav-menu .nav-link {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+}
+.mini-sidebar .sidebar {
+    width: 64px !important;
+    transition: all 0.3s ease-in-out;
+}
+.mini-sidebar .sidebar:hover {
+    width: 256px !important;
+    transition: all 0.2s ease-in-out;
+}
+.mini-sidebar .sidebar:hover .app-name {
+    display: flex !important;
+}
+.mini-sidebar .sidebar:hover .nav-menu .nav-link {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    justify-content: initial !important;
+    transition: all 0.3s ease-in-out;
+}
+.mini-sidebar .sidebar:hover .nav-menu .link-label {
+    opacity: 1 !important;
+    display: flex !important;
+    visibility: visible !important;
+    transition: all 0.2s ease-in-out;
+}
