@@ -52,7 +52,9 @@ function Dashboard() {
                             </div>
 
                             <div className="mx-5">
-                                <h4 className="text-2xl font-semibold text-gray-700">8,282</h4>
+                                <h4 className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
+                                    8,282
+                                </h4>
                                 <div className="text-gray-500">New Users</div>
                             </div>
                         </div>
@@ -82,7 +84,9 @@ function Dashboard() {
                             </div>
 
                             <div className="mx-5">
-                                <h4 className="text-2xl font-semibold text-gray-700">200,521</h4>
+                                <h4 className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
+                                    200,521
+                                </h4>
                                 <div className="text-gray-500">Total Orders</div>
                             </div>
                         </div>
@@ -112,7 +116,9 @@ function Dashboard() {
                             </div>
 
                             <div className="mx-5">
-                                <h4 className="text-2xl font-semibold text-gray-700">215,542</h4>
+                                <h4 className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
+                                    215,542
+                                </h4>
                                 <div className="text-gray-500">Available Products</div>
                             </div>
                         </div>
