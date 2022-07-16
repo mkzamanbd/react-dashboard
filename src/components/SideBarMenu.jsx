@@ -67,7 +67,7 @@ function SideBarMenu({ isOpen, toggleSidebar }) {
                                 } nav-link`}>
                                 <span className="material-icons">grid_view</span>
                                 <span className="mx-4 link-label truncate">UI Elements</span>
-                                <span className="material-icons ml-auto transition-transform transform rotate-180">
+                                <span className="material-icons ml-auto transition-transform transform rotate-180 dropdown-icon">
                                     expand_more
                                 </span>
                             </Link>
