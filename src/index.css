@@ -6,7 +6,7 @@
 
 @layer components {
     .nav-link {
-        @apply flex items-center px-6 py-2 mt-4 duration-200 border-l-4 border-gray-800/25 text-gray-500 hover:bg-gray-600 hover:bg-opacity-25 hover:text-gray-100;
+        @apply flex items-center px-4 py-2 mt-4 duration-200 border-l-4 border-gray-800/25 text-gray-500 hover:bg-gray-600 hover:bg-opacity-25 hover:text-gray-100;
     }
     .nav-link-active {
         @apply bg-gray-600 bg-opacity-25 text-gray-100 border-gray-100;
@@ -44,39 +44,24 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #718096;
 }
+.sidebar {
+    transition: all 0.3s ease-in-out;
+}
 .mini-sidebar .nav-menu .link-label {
-    opacity: 0;
     display: none;
-    visibility: hidden;
 }
 .mini-sidebar .app-name {
     display: none;
 }
-.mini-sidebar .nav-menu .nav-link {
-    padding-left: 0;
-    padding-right: 0;
-    justify-content: center;
-}
 .mini-sidebar .sidebar {
     width: 64px !important;
-    transition: all 0.3s ease-in-out;
 }
 .mini-sidebar .sidebar:hover {
     width: 256px !important;
-    transition: all 0.2s ease-in-out;
 }
 .mini-sidebar .sidebar:hover .app-name {
     display: flex !important;
 }
-.mini-sidebar .sidebar:hover .nav-menu .nav-link {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-    justify-content: initial !important;
-    transition: all 0.3s ease-in-out;
-}
 .mini-sidebar .sidebar:hover .nav-menu .link-label {
-    opacity: 1 !important;
-    display: flex !important;
-    visibility: visible !important;
-    transition: all 0.2s ease-in-out;
+    display: block !important;
 }
