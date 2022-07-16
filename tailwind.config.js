@@ -8,7 +8,7 @@ module.exports = {
         extend: {
             extend: {
                 fontFamily: {
-                    sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+                    sans: ['Roboto', ...defaultTheme.fontFamily.sans],
                 },
             },
         },
