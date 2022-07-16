@@ -47,20 +47,20 @@
 .sidebar {
     transition: all 0.3s ease-in-out;
 }
-.mini-sidebar .nav-menu .link-label {
-    display: none;
-}
-.mini-sidebar .app-name {
-    display: none;
-}
 .mini-sidebar .sidebar {
     width: 64px !important;
 }
 .mini-sidebar .sidebar:hover {
     width: 256px !important;
 }
+.mini-sidebar .app-name {
+    display: none;
+}
 .mini-sidebar .sidebar:hover .app-name {
-    display: flex !important;
+    display: block !important;
+}
+.mini-sidebar .nav-menu .link-label {
+    display: none;
 }
 .mini-sidebar .sidebar:hover .nav-menu .link-label {
     display: block !important;
