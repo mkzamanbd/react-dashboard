@@ -3,7 +3,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@layer base {
+    html {
+        font-family: Roboto, system-ui, sans-serif;
+    }
+}
 @layer components {
     .nav-link {
         @apply flex items-center px-4 py-2 mt-4 duration-200 border-l-4 border-gray-800/25 text-gray-500 hover:bg-gray-600 hover:bg-opacity-25 hover:text-gray-100;
